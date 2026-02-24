@@ -7,7 +7,7 @@ pool:
 
 variables:
   # Ensure this path is correct relative to your repo root
-  projectPath: '$(Build.SourcesDirectory)/AspnetCoreDemo.csproj'
+  projectPath: '$(Build.SourcesDirectory)/AspnetCoreDemo/AspnetCoreDemo.csproj'
   buildConfiguration: 'Release'
 
 steps:
