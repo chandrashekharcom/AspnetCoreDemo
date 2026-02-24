@@ -10,6 +10,7 @@ namespace AspnetCoreDemo.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
+            //add changes 
             _logger = logger;
         }
 
