@@ -1,0 +1,19 @@
+# ASP.NET Core Build Pipeline
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  # Ensure this path is correct relative to your repo root
+  projectPath: '$(Build.SourcesDirectory)/AspnetCoreDemo.csproj'
+  buildConfiguration: 'Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'Build Project'
+  inputs:
+    command: 'build'
+    projects: '$(projectPath)'
+    arguments: '--configuration $(buildConfiguration)'
