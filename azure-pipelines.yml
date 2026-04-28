@@ -3,15 +3,19 @@ trigger:
 - main
 
 pool:
- name: DefaultPool
-  vmImage:'CHANDRASHEKHAR'
+  name: 'DefaultPool'
 
 variables:
-  # Ensure this path is correct relative to your repo root
   projectPath: '$(Build.SourcesDirectory)/AspnetCoreDemo/AspnetCoreDemo.csproj'
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  displayName: 'Install .NET SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '8.x' # Match your project version
+
 - task: DotNetCoreCLI@2
   displayName: 'Build Project'
   inputs:
