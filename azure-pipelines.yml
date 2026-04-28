@@ -4,6 +4,7 @@ trigger:
 
 pool:
   name: 'Default'
+  vmImage: 'CHANDRASHEKHAR'
 
 variables:
   projectPath: '$(Build.SourcesDirectory)/AspnetCoreDemo/AspnetCoreDemo.csproj'
