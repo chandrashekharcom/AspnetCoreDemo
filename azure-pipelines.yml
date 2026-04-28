@@ -3,7 +3,8 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+ name: DefaultPool
+  vmImage:'CHANDRASHEKHAR'
 
 variables:
   # Ensure this path is correct relative to your repo root
